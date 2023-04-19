@@ -1,0 +1,104 @@
+1)Palindrome or not
+
+num=int(input("Enter a number"))
+temp=num
+rev=0
+while num!=0:
+    rem=num%10
+    rev=(rev*10)+rem
+    num=num//10
+if temp==rev:
+    print(temp," is a palindrome number")
+else:
+    print(temp,"is  not a  palindrome number ")
+    
+  -----------------------------------------------------------
+  
+  2)program on Armstrong number
+  
+  
+  num=int(input("Enter a number"))
+temp=num
+arm=0
+while num>0:
+    rem=num%10
+    arm=arm+rem*rem*rem
+    num=num//10
+if(temp==arm):
+    print(temp,"is a armstrong number")
+else:
+    print(temp,"is not  a armstrong number")
+    
+    --------------------------------------------------------------
+    
+    3)Area of the square rectangle and triangle
+   
+ a=int(input("Enter the side of the square"))
+print("Area of the square:",a*a)
+l=int(input("Enter the length of the rectangle:"))
+b=int(input("Enter the breadth of the rectangle:"))
+print("Area of the rectangle:",l*b)
+base=int(input("Enter the base of the Triangle:"))
+h=int(input("Enter the height of the Triiangle:"))
+print("Area of the Triangle:",1/2*(base*h))
+
+
+---------------------------------------------------
+4) swapping i.e arranging 3 numbers in Ascending Order
+
+
+a=int(input())
+b=int(input())
+c=int(input())
+if (a>b and a>c):
+    if(b<c):
+        temp=a
+        a=b
+        b=c
+        c=temp
+    else:
+        temp=a
+        a=c
+        c=temp
+elif (b>a and b>c):
+    if(a<c):
+        temp=b
+        b=c
+        c=temp
+    else:
+        temp=b
+        b=a
+        a=c
+        c=temp
+else:
+    if(a>b):
+        temp=a
+        a=b
+        b=temp
+print("the swapped numbers are:",a,b,c)
+
+------------------------------------------------------
+5)Fibonacci Series
+
+
+n=int(input("Enter the number of terms:"))
+n1=0
+n2=1
+count=2
+if n<0:
+    print("Enter the positive value")
+elif n==1:
+    print(n1,end=" ")
+else:
+    print(n1,end=" ")
+    print(n2,end=" ")
+    while count<n:
+        n3=n1+n2
+        print(n3,end=" ")
+        count+=1
+        n1=n2
+        n2=n3
+
+    
+
+
