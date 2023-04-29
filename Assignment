@@ -1,0 +1,79 @@
+
+n=int(input("How many Books do you want:"))
+total=0
+for i in range(1,n+1):
+    print("Enter the name of the book:")
+    name=input()
+    price=float(input("Enter the price of the book_{}: Rs".format(i)))
+    number=int(input("Number of {} books :".format(name)))
+    total+=(price*number)
+print("Taxes and additional charges are describred below")
+GST=0.12
+print("GST=",GST)
+delivery_charges=250
+print("Delivery charge: Rs",delivery_charges)
+total_GST=total*GST
+print("GST Amount:",(total_GST))
+print("Total Amount including  GST and Delivery Charges:",(total+total_GST+delivery_charges))
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+class Books:
+    def __init__(self,name,price,number):
+        self.name=name
+        self.price=price
+        self.number=number
+    def book(self):
+        print("Enter the taxes and  additional expences")
+my_book=Books("Introduction to Python Programming",499,1)
+print(my_book.name,"price is : Rs",my_book.price)
+sum_1=my_book.price*my_book.number
+
+my_book=Books("Python libraries cookbook",855,1)
+print(my_book.name,"price is : Rs",my_book.price)
+sum_2=my_book.price*my_book.number
+
+my_book=Books("Introduction to data science",645,1)
+print(my_book.name,"price is : Rs",my_book.price)
+sum_3=my_book.price*my_book.number
+
+my_book.book()
+print("GST : 12 %")
+GST=0.12
+Delivery_charges=250
+print("Delivery Charges : Rs",Delivery_charges)
+total=sum_1+sum_2+sum_3
+print("Total invoice bill including GST and Delivery charges : Rs",total+(total*GST)+Delivery_charges)
+
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+
+def unique_values(str):
+    b=[]
+    for i in str:
+        if i not in b:
+            b.append(i)
+    print("Unique characters:",b)
+print("Enter the string :")
+unique_values(input())
+
+------------------------------------------------------------------------
+
+a=input("Enter a String :")
+a.split()
+b=[]
+for i in a:
+    if i not in b:
+        b.append(i)
+print("Unique characters:",b)
+        
+        
+    -----------------------------------------
